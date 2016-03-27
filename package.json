@@ -1,0 +1,35 @@
+{
+  "name": "the-beer-store-react",
+  "version": "0.1.0",
+  "description": "Web App using React.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-beer/the-beer-store-react.git"
+  },
+  "keywords": [
+    "web-app",
+    "react",
+    "the-beer-store"
+  ],
+  "author": "Breno Polanski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-beer/the-beer-store-react/issues"
+  },
+  "homepage": "https://github.com/react-beer/the-beer-store-react#readme",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-bootstrap": "^0.28.4",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-bower": "0.0.13",
+    "gulp-stylus": "^2.3.1"
+  }
+}
