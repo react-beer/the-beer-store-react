@@ -26,13 +26,9 @@ function buildScript(file, watch) {
   var props = {
     entries: ['./src/js/' + file],
     debug: true,
-    transform: ['reactify']
-    // transform: ['reactify', { 'es6': true }] // ES6
-    // transform: [babelify] // ES6
-    // transform: [babelify.configure({ stage: 0 })] // ES6, ES7
+    transform: [babelify.configure({ presets: ['es2015', 'react'] })]
   };
 
-  // var bundler = watch ? watchify(browserify(props)) : browserify(props);
   var bundler = watch ? watchify(browserify(props), { poll: true }) :
     browserify(props);
 
