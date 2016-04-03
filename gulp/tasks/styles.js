@@ -11,8 +11,8 @@ var browserSync  = require('browser-sync');
 var reload       = browserSync.reload;
 var paths        = require('../paths');
 
-// Call Stylus
-module.exports = gulp.task('stylus', function() {
+// Call Styles
+module.exports = gulp.task('styles', function() {
   var processors = [
     autoprefixer
   ];

@@ -49,7 +49,9 @@ function buildScript(file, watch) {
   return rebundle();
 }
 
-// Call Browserify
-module.exports = gulp.task('browserify', function() {
+// Call Scripts
+module.exports = gulp.task('scripts', function() {
   return buildScript('main.js', false);
 });
+
+module.exports = buildScript;

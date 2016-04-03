@@ -6,8 +6,8 @@ var plumber  = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var paths    = require('../paths');
 
-// Call Imagemin
-module.exports = gulp.task('imagemin', function() {
+// Call Images
+module.exports = gulp.task('images', function() {
   return gulp.src(paths.source.img)
     .pipe(plumber())
     .pipe(imagemin({

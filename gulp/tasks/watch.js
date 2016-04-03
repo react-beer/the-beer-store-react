@@ -1,11 +1,13 @@
 'use strict';
 
 // Necessary plugins
-var gulp  = require('gulp');
-var paths = require('../paths');
+var gulp        = require('gulp');
+var buildScript = require('./scripts');
+var paths       = require('../paths');
 
 // Call Watch
 module.exports = gulp.task('watch', function() {
-  gulp.watch(paths.source.styl.folder, ['stylus']);
-  gulp.watch(paths.source.img, ['imagemin']);
+  gulp.watch(paths.source.styl.folder, ['styles']);
+  gulp.watch(paths.source.img, ['images']);
+  return buildScript('main.js', true);
 });
