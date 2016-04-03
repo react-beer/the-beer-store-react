@@ -31,6 +31,7 @@
     "babelify": "^7.2.0",
     "browser-sync": "^2.11.2",
     "browserify": "^13.0.0",
+    "connect-history-api-fallback": "^1.2.0",
     "gulp": "^3.9.1",
     "gulp-bower": "0.0.13",
     "gulp-csscomb": "^3.0.7",
