@@ -33,6 +33,16 @@ gulp.task('bootstrap', function() {
     .pipe(gulp.dest(paths.build.js));
 });
 
+// Call Bootstrap Touchspin
+gulp.task('bootstrap-touchspin', function() {
+  gulp.src(paths.source.bowerDir + '/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build.css));
+  gulp.src(paths.source.bowerDir + '/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build.js));
+});
+
 // Call HTML5Shiv
 gulp.task('html5shiv', function() {
   gulp.src(paths.source.bowerDir + '/html5shiv/dist/html5shiv.min.js')
@@ -49,4 +59,4 @@ gulp.task('respond', function() {
 
 // Call Bower Install
 module.exports = gulp.task('bower-install', 
-  ['bower', 'jquery', 'bootstrap', 'html5shiv', 'respond']);
+  ['bower', 'jquery', 'bootstrap', 'bootstrap-touchspin', 'html5shiv', 'respond']);
