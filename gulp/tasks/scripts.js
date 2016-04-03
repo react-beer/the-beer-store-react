@@ -36,8 +36,7 @@ function buildScript(file, watch) {
     var stream = bundler.bundle();
     return stream
       .on('error', handleErrors)
-      // .pipe(source(file))
-      .pipe(source('main.js'))
+      .pipe(source(file))
       .pipe(gulp.dest('./build/js/'))
       .pipe(reload({ stream: true }));
   }
