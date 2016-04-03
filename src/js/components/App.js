@@ -7,6 +7,18 @@ var Header = require('./Header');
 var Footer = require('./Footer');
 
 var App = React.createClass({
+  getInitialState: function() {
+    return {
+      beers: {}
+    }
+  },
+
+  loadBeers: function() {
+    this.setState({
+      beers: require('../utils/data-beers');
+    });
+  },
+
   render: function() {
     return (
       <Grid>
