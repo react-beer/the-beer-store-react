@@ -3,7 +3,7 @@
    ========================================================================= */
 
 /*! 1.1. TITLE
-   ========================================================================== */
+   ========================================================================= */
 
 .header
   position absolute
@@ -17,7 +17,7 @@
   padding 25px 65px
   font-family "Delius Unicase", cursive
   font-size 3rem
-  color #affcf4
+  color $light-neon
   border 3px solid #fabbaa
   border-radius 55px
   box-shadow inset 0 0 6px #ba051a,
@@ -26,9 +26,9 @@
              0 0 6px #ba051a,
              0 0 40px rgba(186,5,26, .3),
              0 0 100px rgba(186,5,26, .5)
-  text-shadow 0 0 5px #318bf7,
-              0 0 10px #318bf7,
-              0 0 10px #318bf7,
+  text-shadow 0 0 5px $light-blue-neon,
+              0 0 10px $light-blue-neon,
+              0 0 10px $light-blue-neon,
               0 0 80px rgba(49,139,247, .6),
               0 0 100px rgba(49,139,247, .9)
   text-align center
@@ -39,51 +39,40 @@
   display inline
   animation blink 2.6s infinite
 
-@keyframes blink {
-  0% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-  5% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-  6% {
+@keyframes blink
+  0%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  5%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  6%
     color $black
     text-shadow none
-  }
-  12% {
+  12%
     color $black
     text-shadow none
-  }
-  13% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-  25% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-  26% {
+  13%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  25%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  26%
     color $black
     text-shadow none
-  }
-  30% {
+  30%
     color $black
     text-shadow none
-  }
-  31% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-  100% {
-    color #affcf4
-    text-shadow 0 0 5px #318bf7,0 0 10px #318bf7,0 0 10px #318bf7, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
-  }
-}
+  31%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon,  0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
+  100%
+    color $light-neon
+    text-shadow 0 0 5px $light-blue-neon,0 0 10px $light-blue-neon,0 0 10px $light-blue-neon, 0 0 80px rgba(49,139,247, .6),0 0 100px rgba(49,139,247, .9)
 
 /*! 1.2. CART
-   ========================================================================== */
+   ========================================================================= */
 
 .nav-cart
   margin-top 250px
@@ -112,7 +101,7 @@
     font-size 1.5rem
 
 /*! 1.3. PRODUCTS
-   ========================================================================== */
+   ========================================================================= */
 
 .products
   margin-top 50px

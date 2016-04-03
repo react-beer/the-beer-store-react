@@ -22,5 +22,5 @@ module.exports = gulp.task('stylus', function() {
       ]  
     }))
     .pipe(csscomb())
-    .pipe(gulp.dest(paths.build.app));
+    .pipe(gulp.dest(paths.build.css));
 });
