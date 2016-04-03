@@ -40,6 +40,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.1.0",
     "gulp-stylus": "^2.3.1",
+    "gulp-util": "^3.0.7",
     "poststylus": "^0.2.3",
     "watchify": "^3.7.0"
   }
