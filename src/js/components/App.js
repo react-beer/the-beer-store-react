@@ -1,11 +1,15 @@
 'use strict';
 
-var React = require('react');
+var React  = require('react');
+var Grid   = require('react-bootstrap/lib/Grid');
+var Header = require('./Header');
 
 var App = React.createClass({
   render: function() {
-    return ( 
-      <h1>Hello World!!!</h1>
+    return (
+      <Grid>
+        <Header />
+      </Grid>
     );
   }
 });
