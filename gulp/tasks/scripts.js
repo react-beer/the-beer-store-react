@@ -1,12 +1,14 @@
 'use strict';
 
 // Necessary plugins
+var source      = require('vinyl-source-stream');
 var gulp        = require('gulp');
 var gutil       = require('gulp-util');
 var plumber     = require('gulp-plumber');
 var browserify  = require('browserify');
 var babelify    = require('babelify');
 var watchify    = require('watchify');
+var notify      = require('gulp-notify');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var paths       = require('../paths');
@@ -22,7 +24,7 @@ function handleErrors() {
 
 function buildScript(file, watch) {
   var props = {
-    entries: ['./src/js' + file],
+    entries: ['./src/js/' + file],
     debug: true,
     transform: [babelify.configure({ stage: 0 })] // ES6, ES7
   };
