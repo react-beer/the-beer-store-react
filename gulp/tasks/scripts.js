@@ -13,8 +13,8 @@ var browserSync = require('browser-sync');
 var buffer      = require('vinyl-buffer');
 var uglify      = require('gulp-uglify');
 var rename      = require('gulp-rename');
-var reload      = browserSync.reload;
 var paths       = require('../paths');
+var reload      = browserSync.reload;
 
 function handleErrors() {
   var args = Array.prototype.slice.call(arguments);
