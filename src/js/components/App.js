@@ -13,13 +13,18 @@ var App = React.createClass({
     }
   },
 
+  componentWillMount: function() {
+    this.loadBeers();
+  },
+
   loadBeers: function() {
     this.setState({
-      beers: require('../utils/data-beers');
+      beers: require('../utils/data-beers')
     });
   },
 
   render: function() {
+    console.log(this.state.beers);
     return (
       <Grid>
         <GitHubForkRibbon />
