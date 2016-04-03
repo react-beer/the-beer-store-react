@@ -26,9 +26,13 @@ function buildScript(file, watch) {
   var props = {
     entries: ['./src/js/' + file],
     debug: true,
-    transform: [babelify.configure({ stage: 0 })] // ES6, ES7
+    transform: ['reactify']
+    // transform: ['reactify', { 'es6': true }] // ES6
+    // transform: [babelify] // ES6
+    // transform: [babelify.configure({ stage: 0 })] // ES6, ES7
   };
 
+  // var bundler = watch ? watchify(browserify(props)) : browserify(props);
   var bundler = watch ? watchify(browserify(props), { poll: true }) :
     browserify(props);
 
@@ -36,8 +40,9 @@ function buildScript(file, watch) {
     var stream = bundler.bundle();
     return stream
       .on('error', handleErrors)
-      .pipe(source(file))
-      .pipe(gulp.dest('./build/'))
+      // .pipe(source(file))
+      .pipe(source('main.js'))
+      .pipe(gulp.dest('./build/js/'))
       .pipe(reload({ stream: true }));
   }
 
