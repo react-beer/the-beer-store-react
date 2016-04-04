@@ -1,15 +1,17 @@
 'use strict';
 
-var React  = require('react');
-var Grid   = require('react-bootstrap/lib/Grid');
+var React            = require('react');
+var Grid             = require('react-bootstrap/lib/Grid');
 var GitHubForkRibbon = require('./GitHubForkRibbon');
-var Header = require('./Header');
-var Footer = require('./Footer');
+var Header           = require('./Header');
+var Products         = require('./Products');
+var Footer           = require('./Footer');
 
 var App = React.createClass({
   getInitialState: function() {
     return {
-      beers: {}
+      beers: {},
+      cart: {}
     }
   },
 
@@ -24,11 +26,11 @@ var App = React.createClass({
   },
 
   render: function() {
-    console.log(this.state.beers);
     return (
       <Grid>
         <GitHubForkRibbon />
         <Header />
+        <Products beers={this.state.beers} />
         <Footer author="Breno Polanski" ghUserName="brenopolanski" />
       </Grid>
     );
