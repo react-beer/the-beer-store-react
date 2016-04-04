@@ -25,12 +25,26 @@ var App = React.createClass({
     });
   },
 
+  addToCart: function(key) {
+    this.state.cart[key] = this.state.cart[key] + 1 || 1;
+    this.setState({
+      cart: this.state.cart
+    });
+  },
+
+  removeFromCart: function(key) {
+    delete this.state.cart[key];
+    this.setState({
+      cart: this.state.cart
+    });
+  },
+
   render: function() {
     return (
       <Grid>
         <GitHubForkRibbon />
         <Header />
-        <Products beers={this.state.beers} />
+        <Products beers={this.state.beers} addToCart={this.addToCart} />
         <Footer author="Breno Polanski" ghUserName="brenopolanski" />
       </Grid>
     );

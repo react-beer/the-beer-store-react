@@ -14,6 +14,11 @@ var Beer = React.createClass({
     product: React.PropTypes.object.isRequired
   },
 
+  onClickAddToCart: function() {
+    var key = this.props.index;
+    this.props.addToCart(key);
+  },
+
   renderButton: function(isAvailable) {
     var buttonText = (isAvailable ? 'Add to Cart' : 'SOLD OUT!');
 
@@ -24,6 +29,7 @@ var Beer = React.createClass({
           bsSize="large"
           className="btn-add-cart"
           block
+          onClick={this.onClickAddToCart}
         >
           {buttonText}
         </Button>

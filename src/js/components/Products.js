@@ -10,7 +10,14 @@ var Products = React.createClass({
   },
 
   renderBeer: function(key) {
-    return <Beer index={key} key={key} product={this.props.beers[key]} />
+    return (
+      <Beer
+        index={key}
+        key={key}
+        product={this.props.beers[key]}
+        addToCart={this.props.addToCart}
+      />
+    )
   },
 
   render: function() {
