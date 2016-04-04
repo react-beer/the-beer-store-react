@@ -1,20 +1,28 @@
 'use strict';
 
-var React = require('react');
+var React     = require('react');
+var Row       = require('react-bootstrap/lib/Row');
+var Col       = require('react-bootstrap/lib/Col');
+var Button    = require('react-bootstrap/lib/Button');
+var Glyphicon = require('react-bootstrap/lib/Glyphicon');
 
 var Cart = React.createClass({
   render: function() {
     return (
       <nav className="nav-cart">
-        <div className="row">
-          <div className="col-md-12">
+        <Row>
+          <Col md={12}>
             <div className="pull-right">
-              <button type="button" className="btn btn-success" data-toggle="modal" data-target="#myModal">
-                <span className="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Show Cart (4)
-              </button>
+              <Button
+                bsStyle="success"
+                data-toggle="modal"
+                data-target="#myModal"
+              >
+                <Glyphicon glyph="shopping-cart" aria-hidden="true" /> Show Cart (4)
+              </Button>
             </div>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </nav>
     );
   }
