@@ -49,7 +49,7 @@ var App = React.createClass({
           removeFromCart={this.removeFromCart}
         />
         <Products beers={this.state.beers} addToCart={this.addToCart} />
-        <Footer author="Breno Polanski" ghUserName="brenopolanski" />
+        <Footer />
       </Grid>
     );
   }
