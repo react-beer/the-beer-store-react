@@ -17,7 +17,9 @@ var Product = React.createClass({
 
   onClickAddToCart: function() {
     var key = this.props.index;
-    this.props.addToCart(key);
+    var amount = parseInt(this.refs.amount.getValue());
+    this.props.addToCart(key, amount);
+    this.refs.amount.refs.input.value = 1;
   },
 
   renderButton: function(isAvailable) {
@@ -73,6 +75,7 @@ var Product = React.createClass({
             <Input
               type="text"
               className="amount"
+              ref="amount"
               defaultValue="1"
               standalone
             />

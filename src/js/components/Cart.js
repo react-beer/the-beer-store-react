@@ -91,6 +91,8 @@ var Cart = React.createClass({
   },
 
   render: function() {
+    var items = Object.keys(this.props.cart);
+
     return (
       <div>
         {this.renderModalCart()}
@@ -107,7 +109,7 @@ var Cart = React.createClass({
                   <Glyphicon
                     glyph="shopping-cart"
                     aria-hidden="true"
-                  /> Show Cart (4)
+                  /> Show Cart ({items.length})
                 </Button>
               </div>
             </Col>
