@@ -15,15 +15,30 @@ var Product = React.createClass({
     addToCart: React.PropTypes.func.isRequired
   },
 
+  getInitialState: function() {
+    return {
+      isLoading: false
+    }
+  },
+
   onClickAddToCart: function() {
+    var self = this;
     var key = this.props.index;
     var amount = parseInt(this.refs.amount.getValue());
+
+    this.setState({ isLoading: true });
     this.props.addToCart(key, amount);
     this.refs.amount.refs.input.value = 1;
+
+    setTimeout(function() {
+      self.setState({ isLoading: false });
+    }, 1000);
   },
 
   renderButton: function(isAvailable) {
-    var buttonText = (isAvailable ? 'Add to Cart' : 'SOLD OUT!');
+    var isLoading = this.state.isLoading;
+    var buttonTextLoading = (isLoading ? 'Adding...' : 'Add to Cart');
+    var buttonText = (isAvailable ? buttonTextLoading : 'SOLD OUT!');
 
     if (isAvailable) {
       return (
@@ -31,6 +46,7 @@ var Product = React.createClass({
           bsStyle="primary"
           bsSize="large"
           className="btn-add-cart"
+          disabled={isLoading}
           block
           onClick={this.onClickAddToCart}
         >

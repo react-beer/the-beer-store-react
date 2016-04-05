@@ -56,18 +56,19 @@ var Cart = React.createClass({
   },
 
   renderModalCart: function() {
+    var self = this;
     var cartIds = Object.keys(this.props.cart);
-    var total = cartIds.reduce((prevTotal, key)=> {
-      var product = this.props.beers[key];
-      var count = this.props.cart[key];
+    var total = cartIds.reduce(function(prevTotal, key) {
+      var product = self.props.beers[key];
+      var count = self.props.cart[key];
       var isAvailable = product && product.status === 'available';
 
       if (product && isAvailable) {
-        return prevTotal + (count * parseFloat(product.price.replace(',', '.')) || 0.00);
+        return prevTotal + (count * parseFloat(product.price.replace(',', '.')) || 0);
       }
 
       return prevTotal;
-    }, 0.00);
+    }, 0);
 
     return (
       <Modal

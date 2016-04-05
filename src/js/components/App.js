@@ -26,7 +26,6 @@ var App = React.createClass({
   },
 
   addToCart: function(key, amount) {
-    // this.state.cart[key] = this.state.cart[key] + 1 || 1;
     this.state.cart[key] = this.state.cart[key] + amount || amount;
     this.setState({
       cart: this.state.cart
