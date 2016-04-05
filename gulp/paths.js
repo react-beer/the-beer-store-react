@@ -20,6 +20,6 @@ module.exports = {
   },
 
   deploy: {
-    pages: './**/*'
+    pages: ['./.gitignore', './**/*']
   }
 };
