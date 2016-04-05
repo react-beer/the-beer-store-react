@@ -7,6 +7,7 @@ var paths   = require('../paths');
 
 // Deploy to GitHub pages
 module.exports = gulp.task('deploy-pages', function() {
-  return gulp.src(paths.deploy.pages)
+  // return gulp.src(paths.deploy.pages)
+  return gulp.src([paths.deploy.pages, './index.html'])
     .pipe(ghPages());
 });
