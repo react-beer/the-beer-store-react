@@ -32,7 +32,43 @@ var Cart = React.createClass({
     });
   },
 
+  renderCartItem: function(key) {
+    var product = this.props.beers[key];
+    var count = this.props.cart[key];
+
+    return (
+      <Row className="item-cart" key={key}>
+        <Col xs={9} sm={9} md={6}>
+          <h5 className="title">{product.name}</h5>
+          <div className="amount-price">{count}x R$ {product.price}</div>
+        </Col>
+        <Col xs={3} sm={3} md={6}>
+          <Button
+            bsStyle="danger"
+            className="pull-right"
+            onClick={this.props.removeFromCart.bind(null, key)}
+          >
+            <Glyphicon glyph="remove" aria-hidden="true" />
+          </Button>
+        </Col>
+      </Row>
+    );
+  },
+
   renderModalCart: function() {
+    var cartIds = Object.keys(this.props.cart);
+    var total = cartIds.reduce((prevTotal, key)=> {
+      var product = this.props.beers[key];
+      var count = this.props.cart[key];
+      var isAvailable = product && product.status === 'available';
+
+      if (product && isAvailable) {
+        return prevTotal + (count * parseFloat(product.price.replace(',', '.')) || 0.00);
+      }
+
+      return prevTotal;
+    }, 0.00);
+
     return (
       <Modal
         {...this.props}
@@ -43,23 +79,13 @@ var Cart = React.createClass({
           <Modal.Title id="contained-modal-title-lg">
             <Glyphicon glyph="shopping-cart" aria-hidden="true" /> Details Cart
           </Modal.Title>
-          <Modal.Body>
-            <Row className="item-cart">
-              <Col xs={9} sm={9} md={6}>
-                <h5 className="title">Bamberg O Calibre</h5>
-                <div className="amount-price">3x R$ 22,93</div>
-              </Col>
-              <Col xs={3} sm={3} md={6}>
-                <Button bsStyle="danger" className="pull-right">
-                  <Glyphicon glyph="remove" aria-hidden="true" />
-                </Button>
-              </Col>
-            </Row>
-          </Modal.Body>
-          <Modal.Footer>
-            <h4 className="total">Total: R$ 167,84</h4>
-          </Modal.Footer>
         </Modal.Header>
+        <Modal.Body>
+          {cartIds.map(this.renderCartItem)}
+        </Modal.Body>
+        <Modal.Footer>
+          <h4 className="total">Total: R$ {total}</h4>
+        </Modal.Footer>
       </Modal>
     );
   },
