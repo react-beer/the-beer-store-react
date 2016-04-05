@@ -103,8 +103,6 @@ var Cart = React.createClass({
               <div className="pull-right">
                 <Button
                   bsStyle="success"
-                  data-toggle="modal"
-                  data-target="#myModal"
                   onClick={this.showModalCart}
                 >
                   <Glyphicon
