@@ -85,7 +85,7 @@ var Cart = React.createClass({
           {cartIds.map(this.renderCartItem)}
         </Modal.Body>
         <Modal.Footer>
-          <h4 className="total">Total: R$ {total}</h4>
+          <h4 className="total">Total: R$ {total.toFixed(2)}</h4>
         </Modal.Footer>
       </Modal>
     );
