@@ -20,6 +20,6 @@ module.exports = {
   },
 
   deploy: {
-    pages: './build'
+    pages: './**/*'
   }
 };
