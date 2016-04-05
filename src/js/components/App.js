@@ -43,7 +43,11 @@ var App = React.createClass({
     return (
       <Grid>
         <Header />
-        <Cart />
+        <Cart
+          beers={this.state.beers}
+          cart={this.state.cart}
+          removeFromCart={this.removeFromCart}
+        />
         <Products beers={this.state.beers} addToCart={this.addToCart} />
         <Footer author="Breno Polanski" ghUserName="brenopolanski" />
       </Grid>

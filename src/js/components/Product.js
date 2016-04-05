@@ -8,10 +8,11 @@ var Input      = require('react-bootstrap/lib/Input');
 var Button     = require('react-bootstrap/lib/Button');
 var Image      = require('react-bootstrap/lib/Image');
 
-var Beer = React.createClass({
+var Product = React.createClass({
   propTypes: {
     index: React.PropTypes.string.isRequired,
-    product: React.PropTypes.object.isRequired
+    product: React.PropTypes.object.isRequired,
+    addToCart: React.PropTypes.func.isRequired
   },
 
   onClickAddToCart: function() {
@@ -83,4 +84,4 @@ var Beer = React.createClass({
   }
 });
 
-module.exports = Beer;
+module.exports = Product;

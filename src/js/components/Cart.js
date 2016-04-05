@@ -7,6 +7,12 @@ var Button    = require('react-bootstrap/lib/Button');
 var Glyphicon = require('react-bootstrap/lib/Glyphicon');
 
 var Cart = React.createClass({
+  propTypes: {
+    beers: React.PropTypes.object.isRequired,
+    cart: React.PropTypes.object.isRequired,
+    removeFromCart: React.PropTypes.func.isRequired
+  },
+
   render: function() {
     return (
       <nav className="nav-cart">
@@ -18,7 +24,10 @@ var Cart = React.createClass({
                 data-toggle="modal"
                 data-target="#myModal"
               >
-                <Glyphicon glyph="shopping-cart" aria-hidden="true" /> Show Cart (4)
+                <Glyphicon
+                  glyph="shopping-cart"
+                  aria-hidden="true"
+                /> Show Cart (4)
               </Button>
             </div>
           </Col>

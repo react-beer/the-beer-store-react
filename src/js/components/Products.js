@@ -2,16 +2,17 @@
 
 var React = require('react');
 var Row   = require('react-bootstrap/lib/Row');
-var Beer  = require('./Beer');
+var Product  = require('./Product');
 
 var Products = React.createClass({
   propTypes: {
-    beers: React.PropTypes.object.isRequired
+    beers: React.PropTypes.object.isRequired,
+    addToCart: React.PropTypes.func.isRequired
   },
 
   renderBeer: function(key) {
     return (
-      <Beer
+      <Product
         index={key}
         key={key}
         product={this.props.beers[key]}

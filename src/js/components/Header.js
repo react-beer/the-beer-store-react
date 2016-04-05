@@ -1,15 +1,15 @@
 'use strict';
 
-var React = require('react');
-var GitHubForkRibbon = require('./GitHubForkRibbon');
-var Row = require('react-bootstrap/lib/Row');
-var Col = require('react-bootstrap/lib/Col');
+var React      = require('react');
+var GitHubFork = require('./GitHubFork');
+var Row        = require('react-bootstrap/lib/Row');
+var Col        = require('react-bootstrap/lib/Col');
 
 var Header = React.createClass({
   render: function() {
     return (
       <div>
-        <GitHubForkRibbon />
+        <GitHubFork />
         <header className="header">
           <Row>
             <Col md={3} />

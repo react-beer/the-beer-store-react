@@ -2,7 +2,7 @@
 
 var React = require('react');
 
-var GitHubForkRibbon = React.createClass({
+var GitHubFork = React.createClass({
   render: function() {
     return (
       <a href="https://github.com/react-beer">
@@ -16,4 +16,4 @@ var GitHubForkRibbon = React.createClass({
   }
 });
 
-module.exports = GitHubForkRibbon;
+module.exports = GitHubFork;
