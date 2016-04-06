@@ -84,7 +84,7 @@ var Product = React.createClass({
         <Row className={classNames('box', hideBox)}>
           <Col xs={9} sm={9} md={6}>
             <span className="price">
-              <b>Price:</b> R$ {product.price}
+              <b>Price:</b> $ {product.price}
             </span>
           </Col>
           <Col xs={3} sm={3} md={6}>
