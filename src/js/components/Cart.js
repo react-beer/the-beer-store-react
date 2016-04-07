@@ -40,7 +40,7 @@ var Cart = React.createClass({
       <Row className="item-cart" key={key}>
         <Col xs={9} sm={9} md={6}>
           <h5 className="title">{product.name}</h5>
-          <div className="amount-price">{count}x R$ {product.price}</div>
+          <div className="amount-price">{count}x $ {product.price}</div>
         </Col>
         <Col xs={3} sm={3} md={6}>
           <Button
@@ -64,7 +64,7 @@ var Cart = React.createClass({
       var isAvailable = product && product.status === 'available';
 
       if (product && isAvailable) {
-        return prevTotal + (count * parseFloat(product.price.replace(',', '.')) || 0);
+        return prevTotal + (count * parseFloat(product.price) || 0);
       }
 
       return prevTotal;
@@ -85,7 +85,7 @@ var Cart = React.createClass({
           {cartIds.map(this.renderCartItem)}
         </Modal.Body>
         <Modal.Footer>
-          <h4 className="total">Total: R$ {total.toFixed(2)}</h4>
+          <h4 className="total">Total: $ {total.toFixed(2)}</h4>
         </Modal.Footer>
       </Modal>
     );
