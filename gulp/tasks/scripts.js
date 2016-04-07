@@ -4,7 +4,6 @@
 var source      = require('vinyl-source-stream');
 var gulp        = require('gulp');
 var gutil       = require('gulp-util');
-var plumber     = require('gulp-plumber');
 var browserify  = require('browserify');
 var babelify    = require('babelify');
 var watchify    = require('watchify');
@@ -13,7 +12,6 @@ var browserSync = require('browser-sync');
 var buffer      = require('vinyl-buffer');
 var uglify      = require('gulp-uglify');
 var rename      = require('gulp-rename');
-var paths       = require('../paths');
 var reload      = browserSync.reload;
 
 function handleErrors() {

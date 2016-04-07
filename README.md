@@ -2,7 +2,7 @@
 
 ## Demo
 
-![the-beer-store-react](https://raw.githubusercontent.com/react-beer/the-beer-store-react/master/the-beer-store.png)
+[![the-beer-store-react](https://raw.githubusercontent.com/react-beer/the-beer-store-react/master/the-beer-store.png)](http://react-beer.github.io/the-beer-store-react/)
 
 > [Check it live](http://react-beer.github.io/the-beer-store-react/).
 
@@ -10,7 +10,7 @@
 
 ### Installation
 
-First of all, install the dependencies to run this boilerplate.
+First of all, install the dependencies to run this App.
 
 - [NodeJS](http://nodejs.org/)
 - [GulpJS](http://gulpjs.com/)
@@ -137,6 +137,17 @@ With the commands above, you have everything to start.
 │       └── _variables.styl
 └── the-beer-store.png
 ```
+
+## Tasks
+
+- `gulp`: Initialize watch for changes and a server (localhost:3000);
+- `gulp bower-install`: Move dependencies to folder `build/`;
+- `gulp scripts`: Execute js files;
+- `gulp styles`: Compile stylus files;
+- `gulp images`: Compress image files;
+- `gulp watch`: Call for watch files;
+- `gulp browser-sync`: Call for browsersync;
+- `gulp deploy`: Deploy compiled files at `build/` to `github` on branch `gh-pages`.
 
 ## Browser Support
 

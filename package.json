@@ -2,10 +2,6 @@
   "name": "the-beer-store-react",
   "version": "0.1.0",
   "description": "Web App using React.js",
-  "main": "index.js",
-  "scripts": {
-    "deploy": "gulp bower-install && gulp deploy-pages"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-beer/the-beer-store-react.git"
