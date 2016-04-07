@@ -57,7 +57,7 @@ function buildScript(file, watch) {
 
 // Call Scripts
 module.exports = gulp.task('scripts', function() {
-  return buildScript('main.js', false);
+  return buildScript('App.js', false);
 });
 
 module.exports = buildScript;

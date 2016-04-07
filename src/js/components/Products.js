@@ -1,8 +1,8 @@
 'use strict';
 
-var React = require('react');
-var Row   = require('react-bootstrap/lib/Row');
-var Product  = require('./Product');
+var React   = require('react');
+var Row     = require('react-bootstrap/lib/Row');
+var Product = require('./Product');
 
 var Products = React.createClass({
   propTypes: {

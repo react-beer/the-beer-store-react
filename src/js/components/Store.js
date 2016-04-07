@@ -7,7 +7,7 @@ var Cart     = require('./Cart');
 var Products = require('./Products');
 var Footer   = require('./Footer');
 
-var App = React.createClass({
+var Store = React.createClass({
   getInitialState: function() {
     return {
       beers: {},
@@ -69,4 +69,4 @@ var App = React.createClass({
   }
 });
 
-module.exports = App;
+module.exports = Store;
