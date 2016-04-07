@@ -17,7 +17,6 @@ var App = React.createClass({
 
   componentWillMount: function() {
     this.loadBeers();
-    console.log('1');
   },
 
   componentDidMount: function() {
