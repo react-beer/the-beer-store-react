@@ -10,7 +10,7 @@
 
 ### Installation
 
-First of all, install the dependencies to run this boilerplate.
+First of all, install the dependencies to run this App.
 
 - [NodeJS](http://nodejs.org/)
 - [GulpJS](http://gulpjs.com/)
@@ -29,6 +29,113 @@ $ gulp
 With the commands above, you have everything to start.
 
 ```
+.
+├── bower.json
+├── build
+│   ├── css
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap-theme.min.css
+│   │   ├── jquery.bootstrap-touchspin.min.css
+│   │   └── style.css
+│   ├── fonts
+│   │   ├── glyphicons-halflings-regular.eot
+│   │   ├── glyphicons-halflings-regular.svg
+│   │   ├── glyphicons-halflings-regular.ttf
+│   │   ├── glyphicons-halflings-regular.woff
+│   │   └── glyphicons-halflings-regular.woff2
+│   ├── img
+│   │   ├── beers
+│   │   │   ├── bamberg-o-calibre.png
+│   │   │   ├── biritis.png
+│   │   │   ├── blue-moon.png
+│   │   │   ├── brewdog-punk-ipa.png
+│   │   │   ├── burgman-lager.png
+│   │   │   ├── cascahell.png
+│   │   │   ├── chimay-rouge.png
+│   │   │   ├── eisenbahn-pilsen.png
+│   │   │   ├── goose-island.png
+│   │   │   ├── gordelicia.png
+│   │   │   ├── hellbeirao-pils.png
+│   │   │   ├── juan-caloto.png
+│   │   │   ├── jupiter-ipa.png
+│   │   │   ├── leffe-radieuse.png
+│   │   │   ├── madalena-stout.png
+│   │   │   └── schornstein-ipa.png
+│   │   ├── bg-header.jpg
+│   │   ├── favicon-128.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon.ico
+│   │   └── fork-ribbon.png
+│   └── js
+│       ├── app.min.js
+│       ├── bootstrap.min.js
+│       ├── html5shiv.min.js
+│       ├── jquery.bootstrap-touchspin.min.js
+│       ├── jquery.min.js
+│       └── respond.min.js
+├── CONTRIBUTING.md
+├── gulp
+│   ├── index.js
+│   ├── paths.js
+│   └── tasks
+│       ├── bower-install.js
+│       ├── browser-sync.js
+│       ├── default.js
+│       ├── deploy-pages.js
+│       ├── images.js
+│       ├── scripts.js
+│       ├── styles.js
+│       └── watch.js
+├── gulpfile.js
+├── index.html
+├── LICENSE
+├── package.json
+├── README.md
+├── src
+│   ├── img
+│   │   ├── beers
+│   │   │   ├── bamberg-o-calibre.png
+│   │   │   ├── biritis.png
+│   │   │   ├── blue-moon.png
+│   │   │   ├── brewdog-punk-ipa.png
+│   │   │   ├── burgman-lager.png
+│   │   │   ├── cascahell.png
+│   │   │   ├── chimay-rouge.png
+│   │   │   ├── eisenbahn-pilsen.png
+│   │   │   ├── goose-island.png
+│   │   │   ├── gordelicia.png
+│   │   │   ├── hellbeirao-pils.png
+│   │   │   ├── juan-caloto.png
+│   │   │   ├── jupiter-ipa.png
+│   │   │   ├── leffe-radieuse.png
+│   │   │   ├── madalena-stout.png
+│   │   │   └── schornstein-ipa.png
+│   │   ├── bg-header.jpg
+│   │   ├── favicon-128.png
+│   │   ├── favicon-32.png
+│   │   ├── favicon.ico
+│   │   └── fork-ribbon.png
+│   ├── js
+│   │   ├── components
+│   │   │   ├── App.js
+│   │   │   ├── Cart.js
+│   │   │   ├── Footer.js
+│   │   │   ├── GitHubFork.js
+│   │   │   ├── Header.js
+│   │   │   ├── Product.js
+│   │   │   └── Products.js
+│   │   ├── main.js
+│   │   └── utils
+│   │       └── data-beers.js
+│   └── styl
+│       ├── _components.styl
+│       ├── _footer.styl
+│       ├── _global.styl
+│       ├── _responsive.styl
+│       ├── style.styl
+│       ├── _toc.styl
+│       └── _variables.styl
+└── the-beer-store.png
 ```
 
 ## Browser Support
