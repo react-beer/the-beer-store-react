@@ -17,6 +17,21 @@ var App = React.createClass({
 
   componentWillMount: function() {
     this.loadBeers();
+    console.log('1');
+  },
+
+  componentDidMount: function() {
+    var localStorageData = localStorage.getItem('cart');
+
+    if (localStorageData) {
+      this.setState({
+        cart: JSON.parse(localStorageData)
+      });
+    }
+  },
+
+  componentWillUpdate: function(nextProps, nextState) {
+    localStorage.setItem('cart', JSON.stringify(nextState.cart));
   },
 
   loadBeers: function() {
