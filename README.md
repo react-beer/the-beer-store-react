@@ -67,7 +67,7 @@ With the commands above, you have everything to start.
 │   │   ├── favicon.ico
 │   │   └── fork-ribbon.png
 │   └── js
-│       ├── app.min.js
+│       ├── App.js
 │       ├── bootstrap.min.js
 │       ├── html5shiv.min.js
 │       ├── jquery.bootstrap-touchspin.min.js
