@@ -81,7 +81,8 @@ With the commands above, you have everything to start.
 │       ├── bower-install.js
 │       ├── browser-sync.js
 │       ├── default.js
-│       ├── deploy-pages.js
+│       ├── deploy.js
+│       ├── help.js
 │       ├── images.js
 │       ├── scripts.js
 │       ├── styles.js
@@ -116,15 +117,15 @@ With the commands above, you have everything to start.
 │   │   ├── favicon.ico
 │   │   └── fork-ribbon.png
 │   ├── js
+│   │   ├── App.js
 │   │   ├── components
-│   │   │   ├── App.js
 │   │   │   ├── Cart.js
 │   │   │   ├── Footer.js
 │   │   │   ├── GitHubFork.js
 │   │   │   ├── Header.js
 │   │   │   ├── Product.js
-│   │   │   └── Products.js
-│   │   ├── main.js
+│   │   │   ├── Products.js
+│   │   │   └── Store.js
 │   │   └── utils
 │   │       └── data-beers.js
 │   └── styl

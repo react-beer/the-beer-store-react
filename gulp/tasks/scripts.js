@@ -38,9 +38,9 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source(file))
-      .pipe(buffer())
-      .pipe(uglify())
-      .pipe(rename('app.min.js'))
+      // .pipe(buffer())
+      // .pipe(uglify())
+      // .pipe(rename('app.js'))
       .pipe(gulp.dest('./build/js/'))
       .pipe(reload({ stream: true }));
   }
