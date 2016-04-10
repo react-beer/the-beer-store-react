@@ -4,7 +4,6 @@
 var source      = require('vinyl-source-stream');
 var gulp        = require('gulp');
 var gutil       = require('gulp-util');
-var plumber     = require('gulp-plumber');
 var browserify  = require('browserify');
 var babelify    = require('babelify');
 var watchify    = require('watchify');
@@ -13,7 +12,6 @@ var browserSync = require('browser-sync');
 var buffer      = require('vinyl-buffer');
 var uglify      = require('gulp-uglify');
 var rename      = require('gulp-rename');
-var paths       = require('../paths');
 var reload      = browserSync.reload;
 
 function handleErrors() {
@@ -40,9 +38,9 @@ function buildScript(file, watch) {
     return stream
       .on('error', handleErrors)
       .pipe(source(file))
-      .pipe(buffer())
-      .pipe(uglify())
-      .pipe(rename('app.min.js'))
+      // .pipe(buffer())
+      // .pipe(uglify())
+      // .pipe(rename('app.js'))
       .pipe(gulp.dest('./build/js/'))
       .pipe(reload({ stream: true }));
   }
@@ -59,7 +57,7 @@ function buildScript(file, watch) {
 
 // Call Scripts
 module.exports = gulp.task('scripts', function() {
-  return buildScript('main.js', false);
+  return buildScript('App.js', false);
 });
 
 module.exports = buildScript;

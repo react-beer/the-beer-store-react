@@ -5,5 +5,5 @@ var gulp = require('gulp');
 
 // Call Default
 module.exports = gulp.task('default',
-  ['bower-install', 'styles', 'images', 'scripts', 'browser-sync', 'watch']
+  ['styles', 'images', 'scripts', 'browser-sync', 'watch']
 );
