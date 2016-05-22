@@ -12,6 +12,16 @@ gulp.task('bower', function() {
     .pipe(gulp.dest(paths.source.bowerDir));
 });
 
+// Call Font Awesome
+gulp.task('fontAwesome', function() {
+  gulp.src(paths.source.bowerDir + '/font-awesome/css/font-awesome.min.css')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build.css));
+  gulp.src(paths.source.bowerDir + '/font-awesome/fonts/**.*')
+    .pipe(plumber())
+    .pipe(gulp.dest(paths.build.fonts));
+});
+
 // Call jQuery
 gulp.task('jquery', function() {
   gulp.src(paths.source.bowerDir + '/jquery/dist/jquery.min.js')
@@ -59,4 +69,5 @@ gulp.task('respond', function() {
 
 // Call Bower Install
 module.exports = gulp.task('bower-install', 
-  ['bower', 'jquery', 'bootstrap', 'bootstrap-touchspin', 'html5shiv', 'respond']);
+  ['bower', 'fontAwesome', 'jquery', 'bootstrap', 'bootstrap-touchspin', 
+   'html5shiv', 'respond']);

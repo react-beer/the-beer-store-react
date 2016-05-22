@@ -1,11 +1,11 @@
 'use strict';
 
-var React     = require('react');
-var Row       = require('react-bootstrap/lib/Row');
-var Col       = require('react-bootstrap/lib/Col');
-var Modal     = require('react-bootstrap/lib/Modal');
-var Button    = require('react-bootstrap/lib/Button');
-var Glyphicon = require('react-bootstrap/lib/Glyphicon');
+var React  = require('react');
+var Row    = require('react-bootstrap/lib/Row');
+var Col    = require('react-bootstrap/lib/Col');
+var Modal  = require('react-bootstrap/lib/Modal');
+var Button = require('react-bootstrap/lib/Button');
+var Icon   = require('react-fontawesome');
 
 var Cart = React.createClass({
   propTypes: {
@@ -48,7 +48,7 @@ var Cart = React.createClass({
             className="pull-right"
             onClick={this.props.removeFromCart.bind(null, key)}
           >
-            <Glyphicon glyph="remove" aria-hidden="true" />
+            <Icon name="remove" />
           </Button>
         </Col>
       </Row>
@@ -78,7 +78,7 @@ var Cart = React.createClass({
       >
         <Modal.Header closeButton>
           <Modal.Title id="contained-modal-title-lg">
-            <Glyphicon glyph="shopping-cart" aria-hidden="true" /> Details Cart
+            <Icon name="shopping-cart" /> Details Cart
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
@@ -105,10 +105,7 @@ var Cart = React.createClass({
                   bsStyle="success"
                   onClick={this.showModalCart}
                 >
-                  <Glyphicon
-                    glyph="shopping-cart"
-                    aria-hidden="true"
-                  /> Show Cart ({items.length})
+                  <Icon name="shopping-cart" /> Show Cart ({items.length})
                 </Button>
               </div>
             </Col>

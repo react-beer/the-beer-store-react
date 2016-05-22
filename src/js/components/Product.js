@@ -1,12 +1,14 @@
 'use strict';
 
-var React      = require('react');
-var classNames = require('classnames');
-var Row        = require('react-bootstrap/lib/Row');
-var Col        = require('react-bootstrap/lib/Col');
-var Input      = require('react-bootstrap/lib/Input');
-var Button     = require('react-bootstrap/lib/Button');
-var Image      = require('react-bootstrap/lib/Image');
+var React       = require('react');
+var ReactDOM    = require('react-dom');
+var classNames  = require('classnames');
+var Row         = require('react-bootstrap/lib/Row');
+var Col         = require('react-bootstrap/lib/Col');
+var FormGroup   = require('react-bootstrap/lib/FormGroup');
+var FormControl = require('react-bootstrap/lib/FormControl');
+var Button      = require('react-bootstrap/lib/Button');
+var Image       = require('react-bootstrap/lib/Image');
 
 var Product = React.createClass({
   propTypes: {
@@ -24,11 +26,11 @@ var Product = React.createClass({
   onClickAddToCart: function() {
     var self = this;
     var key = this.props.index;
-    var amount = parseInt(this.refs.amount.getValue());
+    var amount = parseInt(ReactDOM.findDOMNode(this.refs.amount).value);
 
     this.setState({ isLoading: true });
     this.props.addToCart(key, amount);
-    this.refs.amount.refs.input.value = 1;
+    ReactDOM.findDOMNode(this.refs.amount).value = 1;
 
     setTimeout(function() {
       self.setState({ isLoading: false });
@@ -88,13 +90,14 @@ var Product = React.createClass({
             </span>
           </Col>
           <Col xs={3} sm={3} md={6}>
-            <Input
-              type="text"
-              className="amount"
-              ref="amount"
-              defaultValue="1"
-              standalone
-            />
+            <FormGroup>
+              <FormControl
+                type="text"
+                className="amount"
+                ref="amount"
+                defaultValue="1"
+              />
+            </FormGroup>
           </Col>
         </Row>
         {this.renderButton(isAvailable)}

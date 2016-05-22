@@ -13,7 +13,7 @@
 First of all, install the dependencies to run this App.
 
 - [NodeJS](http://nodejs.org/)
-- [GulpJS](http://gulpjs.com/)
+- [GulpJS](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#1-install-gulp-globally)
 
 ```sh
 # Clone this repository
@@ -35,9 +35,16 @@ With the commands above, you have everything to start.
 │   ├── css
 │   │   ├── bootstrap.min.css
 │   │   ├── bootstrap-theme.min.css
+│   │   ├── font-awesome.min.css
 │   │   ├── jquery.bootstrap-touchspin.min.css
 │   │   └── style.css
 │   ├── fonts
+│   │   ├── FontAwesome.otf
+│   │   ├── fontawesome-webfont.eot
+│   │   ├── fontawesome-webfont.svg
+│   │   ├── fontawesome-webfont.ttf
+│   │   ├── fontawesome-webfont.woff
+│   │   ├── fontawesome-webfont.woff2
 │   │   ├── glyphicons-halflings-regular.eot
 │   │   ├── glyphicons-halflings-regular.svg
 │   │   ├── glyphicons-halflings-regular.ttf
@@ -148,6 +155,7 @@ With the commands above, you have everything to start.
 - `gulp images`: Compress image files;
 - `gulp watch`: Call for watch files;
 - `gulp browser-sync`: Call for browsersync;
+- `gulp help`: Show help with gulp options;
 - `gulp deploy`: Deploy compiled files at `build/` to `github` on branch `gh-pages`.
 
 ## Browser Support
